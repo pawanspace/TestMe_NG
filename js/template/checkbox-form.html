@@ -1,0 +1,17 @@
+<div class="form-group">
+  <input type="checkbox" ng-model="masterSelector">Select All
+</div>
+<div class="form-group">
+  <label ng-repeat="filter in filters"  class="checkbox">
+    <input
+      type="checkbox"
+      name="filter"
+      value="{{filter.name}}"
+      ng-checked="filter.selected"
+      ng-click = "check(filter);" 
+      ng-model="filter.selected"
+    > {{filter.name}}
+  </label>
+</div>
+<button type="button" class="btn btn-default" ng-click="submit();">Submit</button>
+  
